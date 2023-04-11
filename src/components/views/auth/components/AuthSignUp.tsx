@@ -35,9 +35,9 @@ import { PasswordLevel, strengthColor, strengthIndicator } from '@src/utils/pass
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
 
-// ===========================|| FIREBASE - REGISTER ||=========================== //
+// ===========================|| AuthSignUp ||=========================== //
 
-const FirebaseRegister = ({ ...others }) => {
+const AuthSignUp = ({ ...others }) => {
     const theme = useTheme()
     const mountedRef = useScriptMountedRef()
     const matchDownSM = useMediaQuery(theme.breakpoints.down('md'))
@@ -297,4 +297,4 @@ const FirebaseRegister = ({ ...others }) => {
     )
 }
 
-export default FirebaseRegister
+export default AuthSignUp

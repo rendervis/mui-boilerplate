@@ -4,7 +4,6 @@ import { ReactNode } from 'react'
 import dashboard from './dashboard'
 import customers from './customers'
 import account from './account'
-import pages from './pages'
 import utilities from './utilities'
 import other from './other'
 
@@ -34,7 +33,7 @@ type Page = INavItem
 // ==============================|| MENU ITEMS ||============================== //
 
 const menuItems = {
-    items: [dashboard, customers, account, pages, utilities, other]
+    items: [dashboard, customers, account, utilities, other]
 }
 
 export default menuItems

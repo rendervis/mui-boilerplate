@@ -1,13 +1,13 @@
 // assets
 import { IconBrandChrome } from '@tabler/icons';
-import { Other } from '.';
+import { Page } from '.';
 
 // constant
 const icons = { IconBrandChrome };
 
 // ==============================|| SAMPLE PAGE ||============================== //
 
-const other: Other = {
+const other: Page = {
     id: 'sample-docs-roadmap',
     title: 'Sample Docs',
     type: 'group',

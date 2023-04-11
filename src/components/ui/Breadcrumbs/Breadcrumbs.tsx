@@ -85,7 +85,7 @@ const Breadcrumbs = ({
     useEffect(() => {
         navigation?.items?.map((menu) => {
             if (menu.type && menu.type === 'group') {
-                getCollapse(menu)
+                getCollapse(menu as INavItem)
             }
             return false
         })

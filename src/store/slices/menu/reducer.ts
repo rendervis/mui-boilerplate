@@ -2,8 +2,8 @@ import { createReducer, current } from '@reduxjs/toolkit'
 import { setMenu, menuOpen } from './actions'
 
 export interface MenuState {
-    isOpen: Array<string>
     id: string
+    isOpen: Array<string>
     opened: boolean
 }
 

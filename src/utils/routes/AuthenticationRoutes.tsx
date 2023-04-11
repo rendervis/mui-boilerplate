@@ -1,13 +1,12 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 // project imports
-import { MinimalLayout } from '@components/common/Layout';
-import { Loadable } from '@components/ui/Loadable';
+import { MinimalLayout } from '@components/common/Layout'
+import { Loadable } from '@components/ui/Loadable'
 
-
-// login option 3 routing
-const AuthLogin3 = Loadable(lazy(() => import('@components/views/authentication/authentication3/Login3')));
-const AuthRegister3 = Loadable(lazy(() => import('@components/views/authentication/authentication3/Register3')));
+// login routing
+const AuthLogin = Loadable(lazy(() => import('@components/views/auth/login')))
+const AuthSignUp = Loadable(lazy(() => import('@components/views/auth/signup')))
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //
 
@@ -16,14 +15,14 @@ const AuthenticationRoutes = {
     element: <MinimalLayout />,
     children: [
         {
-            path: '/pages/login/login3',
-            element: <AuthLogin3 />
+            path: '/login',
+            element: <AuthLogin />
         },
         {
-            path: '/pages/register/register3',
-            element: <AuthRegister3 />
+            path: '/signup',
+            element: <AuthSignUp />
         }
     ]
-};
+}
 
-export default AuthenticationRoutes;
+export default AuthenticationRoutes
