@@ -1,12 +1,10 @@
-import { combineReducers } from "@reduxjs/toolkit"
-import { adminReducer } from "./slices/admin/reducer"
-import { menuReducer } from "./slices/menu/reducer"
+import { combineReducers } from '@reduxjs/toolkit'
+import { localAuthReducer } from './slices/localAuth/reducer'
+import { menuReducer } from './slices/menu/reducer'
 
 const rootReducer = combineReducers({
-  admin: adminReducer,
-  menu: menuReducer,
+    localAuth: localAuthReducer,
+    menu: menuReducer
 })
-
-export type RootState = ReturnType<typeof rootReducer>
 
 export default rootReducer

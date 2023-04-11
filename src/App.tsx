@@ -1,22 +1,30 @@
-import { ThemeProvider } from "@mui/material/styles";
-import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { ThemeProvider } from '@mui/material/styles'
+import { CssBaseline, StyledEngineProvider } from '@mui/material'
 
-// routing
-import Routes from "@src/utils/routes";
+// third party
+import { Provider } from 'react-redux'
+
+// project imports
+import store, { persistor } from './store'
+import { PersistGate } from 'redux-persist/integration/react'
+import Routes from '@src/utils/routes'
 
 // defaultTheme
-import { createTheme } from '@components/theme';
-
+import { createTheme } from '@components/theme'
 
 export default function App() {
+    const theme = createTheme()
 
-  const theme = createTheme();
-  return (
-    <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Routes />
-      </ThemeProvider>
-    </StyledEngineProvider>
-  );
+    return (
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                <StyledEngineProvider injectFirst>
+                    <ThemeProvider theme={theme}>
+                        <CssBaseline />
+                        <Routes />
+                    </ThemeProvider>
+                </StyledEngineProvider>
+            </PersistGate>
+        </Provider>
+    )
 }

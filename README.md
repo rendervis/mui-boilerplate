@@ -9,6 +9,9 @@ Download the example [or clone the repo](https://github.com/mui/material-ui):
 ```
 cd mui-boilerplate
 ```
+.env.local
+    VITE_BASE_URL=http://localhost:5173
+    VITE_API_URL=http://localhost:4000/api
 
 Install it and run:
 

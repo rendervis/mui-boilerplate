@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 // material-ui
 import { Grid, useTheme } from '@mui/material'
@@ -9,12 +10,16 @@ import TotalOrderLineChartCard from './TotalOrderLineChartCard'
 import TotalIncomeDarkCard from './TotalIncomeDarkCard'
 import TotalIncomeLightCard from './TotalIncomeLightCard'
 
+import { selectAuth } from '@src/store/slices/localAuth/selectors'
+
 // ==============================|| DEFAULT DASHBOARD ||============================== //
 
 const Dashboard = () => {
     const theme = useTheme()
     const gridSpacing = theme.custom.gridSpacing
     const [isLoading, setLoading] = useState(true)
+    const auth = useSelector(selectAuth)
+
     useEffect(() => {
         setLoading(false)
     }, [])

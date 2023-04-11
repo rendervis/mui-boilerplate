@@ -162,9 +162,9 @@ const TotalOrderLineChartCard = ({ isLoading }: TotalOrderLineChartCardProps) =>
                                     </Grid>
                                     <Grid item xs={6}>
                                         {timeValue ? (
-                                            <Chart {...ChartDataMonth} height={90} type="line" />
+                                            <Chart {...(ChartDataMonth as Chart['props'])} height={90} type="line" />
                                         ) : (
-                                            <Chart {...ChartDataYear} height={90} type="line" />
+                                            <Chart {...(ChartDataYear as Chart['props'])} height={90} type="line" />
                                         )}
                                     </Grid>
                                 </Grid>
